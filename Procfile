@@ -1,1 +1,1 @@
-web: gunicorn planac.wsgi --bind 0.0.0.0:$PORT
+web: python manage.py migrate && gunicorn planac.wsgi --bind 0.0.0.0:$PORT --workers 2
